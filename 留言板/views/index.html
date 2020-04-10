@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板</title>
+    <style>
+        .box {
+            width: 500px;
+            /* height: 300px; */
+            margin: auto;
+        }
+
+        a>button {
+            color: goldenrod;
+            font-size: 16px;
+            background-color: honeydew;
+        }
+
+        .box>h1 {
+            text-align: center;
+        }
+
+        .comments {
+            height: 280px;
+            border: 2px dashed yellowgreen;
+        }
+
+        .comments li {
+            list-style: none;
+            padding-left: 10px;
+        }
+
+        .btns {
+            float: right;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>留言板</h1>
+
+        <div class="comments">
+            {{each comments}}
+            <ul>
+                <li>{{$value.name}}说：{{$value.message}}<span>{{$value.dataTime}}</span></li>
+            </ul>
+            {{/each}}
+        </div>
+        <div class="btns">
+            <div class="btn">
+                <a href="/post"><button>发表评论</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

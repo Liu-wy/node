@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发表评论</title>
+</head>
+
+<body>
+    <div class="box">
+        <h1>发表评论</h1>
+        <div>
+            
+            <a href="/"><button>首页</button></a>
+        </div>
+        <form action="/pinglun" method="GET">
+            <div>
+                <label for="name">你的姓名</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div>
+                <label for="textarea_message">留言内容</label>
+                <textarea class="form-control" name="message" id="textarea_message" cols="30" rows="10" required
+                    minlength="5" maxlength="20"></textarea>
+            </div>
+            <button type="submit" class="btn btn-default">发表</button>
+        </form>
+        
+    </div>
+</body>
+
+</html>
